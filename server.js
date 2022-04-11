@@ -14,10 +14,10 @@ app.get("/drinks/", (req, res) => {
  
 });
 
-// // Show Route - show a specific fruit
-// app.get("/drinks/:id", (req, res) => {
-//   res.render("show.ejs", { drinks: drinks[req.params.id] });
-// });
+// Show Route - show a specific fruit
+app.get("/drinks/:id", (req, res) => {
+  res.render("drinks_show.ejs", { drink: drinks[req.params.id] });
+});
 
 app.listen(3000, () => {
   console.log(`Listening on port ${PORT}`);
